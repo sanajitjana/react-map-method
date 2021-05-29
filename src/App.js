@@ -4,6 +4,7 @@ import { Row, Col, Container } from "react-bootstrap";
 //component
 import Cards from "./Component/Card";
 import Navbar from "./Component/Navbar";
+import Footer from "./Component/Footer";
 
 //array
 import Blog_Data from "./Component/Api";
@@ -46,6 +47,7 @@ function App() {
           {/* {Blog_Data.map(nblog)} */}
         </Row>
       </Container>
+      <Footer />
     </>
   );
 }
