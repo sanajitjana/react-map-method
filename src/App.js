@@ -14,10 +14,10 @@ import Blog_Data from "./Component/Api";
 //   return (
 //     <Col md={4}>
 //       <Cards
-//         imgsrc={val.data_imgsrc}
-//         title={val.data_title}
-//         description={val.data_description}
-//         link={val.data_link}
+//         imgsrc={val.blog_imgsrc}
+//         title={val.blog_title}
+//         description={val.blog_description}
+//         link={val.blog_link}
 //       />
 //     </Col>
 //   );
@@ -27,17 +27,18 @@ console.log(Blog_Data[0]);
 function App() {
   return (
     <>
-      <Container>
-        <Navbar />
+    <Navbar />
+      <Container>        
         <Row>
           {Blog_Data.map((val) => {
             return (
               <Col md={4}>
                 <Cards
-                  imgsrc={val.data_imgsrc}
-                  title={val.data_title}
-                  description={val.data_description}
-                  link={val.data_link}
+                  key={val.blog_id}
+                  imgsrc={val.blog_imgsrc}
+                  title={val.blog_title}
+                  description={val.blog_description}
+                  link={val.blog_link}
                 />
               </Col>
             );
